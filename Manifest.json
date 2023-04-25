@@ -1,0 +1,41 @@
+{
+
+    "short_name": "Futurama",
+    "name":"Practica personajes",
+    "start_url": "index.html",
+    "background_color": "#0b2e41",
+    "display": "standalone",
+    "orientation":"portrait",
+    "theme_color":"#1f4c6e",
+    "icons":[
+
+        {
+            "src": "/img/icono/icons8-futurama-fry-50.png",
+            "type": "image/png",
+            "sizes": "50x50"
+        },
+        {
+            "src": "/img/icono/icons8-futurama-fry-100.png",
+            "type": "image/png",
+            "sizes": "100x100"
+        },
+    
+        {
+            "src": "/img/icono/icons8-futurama-fry-150.png",
+            "type": "/img/image/png",
+            "sizes": "150x150"
+        },
+        {
+            "src": "/img/icono/icons8-futurama-fry-250.png",
+            "type": "image/png",
+            "sizes": "250x250"
+        },
+        {
+            "src": "/img/icono/icons8-futurama-fry-500.png",
+            "type": "image/png",
+            "sizes": "500x500"
+        }
+    ]
+
+
+}

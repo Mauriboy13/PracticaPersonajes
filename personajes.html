@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fruta seleccionada</title>
+  </head>
+  <body>
+    <h1>Fruta seleccionada:</h1>
+    <h2 id="nombre-fruta"></h2>
+    <img id="fruta-imagen" src="" alt="Imagen de fruta">
+    <p id="descripcion-fruta"></p>
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const nombreFruta = urlParams.get('fruta');
+      const imagenSrc = urlParams.get('imagen');
+      const descripcionFruta = urlParams.get('descripcion');
+
+      const nombreFrutaElement = document.getElementById('nombre-fruta');
+      const imagenElement = document.getElementById('fruta-imagen');
+      const descripcionFrutaElement = document.getElementById('descripcion-fruta');
+
+      nombreFrutaElement.textContent = nombreFruta;
+      imagenElement.src = imagenSrc;
+      imagenElement.alt = `Imagen de ${nombreFruta}`;
+      imagenElement.style.width = '200px';
+      imagenElement.style.height = '200px';
+      descripcionFrutaElement.textContent = descripcionFruta;
+    </script>
+  </body>
+</html>
+
+const personajes = {
+  fry: {
+    imagen: 'img/Fryv1.jpg',
+    nombre: 'Fry',
+    descripcion: 'La manzana es una fruta muy popular y saludable. Es rica en antioxidantes y fibra.'
+  },
+  bender: {
+    imagen: 'img/Benderv1.jpg',
+    nombre: 'Bender',
+    descripcion: 'La pera es una fruta jugosa y dulce, rica en fibra y vitaminas.'
+  },
+  leela: {
+    imagen: 'img/Leela_Turanga.jpg',
+    nombre: 'Lella',
+    descripcion: 'El mango es una fruta tropical muy sabrosa y nutritiva, rica en vitamina C y antioxidantes.'
+  },
+  amy: {
+    imagen: 'img/AmyWong.jpg',
+    nombre: 'Amy',
+    descripcion: 'La pera es una fruta jugosa y dulce, rica en fibra y vitaminas.'
+  },
+  hermes: {
+    imagen: 'img/Hermesv1.jpg',
+    nombre: 'Hermes',
+    descripcion: 'La pera es una fruta jugosa y dulce, rica en fibra y vitaminas.'
+  },
+  zoidberg: {
+    imagen: 'img/Zoidbergv1.jpg',
+    nombre: 'Zoidberg',
+    descripcion: 'La pera es una fruta jugosa y dulce, rica en fibra y vitaminas.'
+  }
+};
+
+const selectFrutas = document.getElementById('selectPersonaje');
+const contenedorImagen = document.getElementById('imagenPersonaje');
+
+selectFrutas.addEventListener('change', function() {
+  const nombreFruta = selectFrutas.value;
+  const imagenSrc = frutas[nombreFruta].imagen;
+  const nombreFrutaElement = document.createElement('h2');
+  nombreFrutaElement.textContent = frutas[nombreFruta].nombre;
+  const imagenElement = document.createElement('img');
+  imagenElement.src = imagenSrc;
+  imagenElement.alt = `Imagen de ${frutas[nombreFruta].nombre}`;
+  imagenElement.style.width = '200px';
+  imagenElement.style.height = '200px';
+  const descripcionFrutaElement = document.createElement('p');
+  descripcionFrutaElement.textContent = frutas[nombreFruta].descripcion;
+  contenedorImagen.innerHTML = '';
+  contenedorImagen.appendChild(nombreFrutaElement);
+  contenedorImagen.appendChild(imagenElement);
+  //contenedorImagen.appendChild(descripcionFrutaElement);
+  imagenElement.addEventListener('click', function() {
+    window.location.href = `personajes.html?fruta=${nombreFruta}&imagen=${imagenSrc}&descripcion=${frutas[nombreFruta].descripcion}`;
+  });
+});

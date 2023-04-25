@@ -1,0 +1,62 @@
+
+body {
+  background-color: #0b2e41; 
+  color: #f1f1f1; 
+  padding:20px;
+  margin:0 auto;
+}
+
+h1 {
+  font-family: 'Bender', sans-serif; 
+  font-size: 25px; 
+  color: #f1f1f1; 
+}
+#descripcionPersonaje {
+  text-align: justify;
+}
+
+
+select {
+  margin-top: 18px; 
+  width: 200px; 
+  font-family: 'Bender', sans-serif; 
+  font-size: 18px; 
+  background-color: #1f4c6e; 
+  color: #f1f1f1; 
+  border: none; 
+  border-radius: 8px; 
+}
+/* #imagenPersonaje {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} */
+
+#imagenPersonaje img {
+  width: 300px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+#descripcionPersonaje {
+  font-size: 15px;
+  text-align: justify;
+}
+#imagenPersonaje {
+  margin-top: 20px; 
+  width: 300px; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#imagen {
+  margin-top: 20px; 
+  width: 340px; 
+}
+
+img {
+  width: 100%; 
+  border-radius: 8px; 
+}
